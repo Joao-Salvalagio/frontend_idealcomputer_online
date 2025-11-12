@@ -1,0 +1,16 @@
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #00b8ff 0%, #0090cc 100%);
+  border-radius: 0.5rem;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 184, 255, 0.3);
+  transition: transform 0.2s;
+}
+
+.logoIcon:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,399 @@
+/* ========================================
+   CONTAINER PRINCIPAL
+   ======================================== */
+.container {
+  min-height: calc(100vh - 70px);
+  padding: 2rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), #0099cc);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 212, 255, 0.3);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ========================================
+   CARD PRINCIPAL
+   ======================================== */
+.buildCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ========================================
+   TABELA DE COMPONENTES
+   ======================================== */
+.tableContainer {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+.componentsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+.componentsTable thead {
+  background: linear-gradient(135deg, var(--accent), #0099cc);
+}
+
+.componentsTable th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+/* Corpo da tabela */
+.componentsTable tbody tr {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.componentsTable tbody tr:hover {
+  background: var(--bg-card);
+  transform: translateX(4px);
+}
+
+.componentsTable td {
+  padding: 1rem;
+  color: var(--text-primary);
+}
+
+/* Células específicas */
+.typeCell {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.nameCell {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.specsCell {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.priceCell {
+  font-weight: 600;
+  color: var(--accent);
+  text-align: right;
+}
+
+/* Linha vazia */
+.emptyRow td {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.notApplicable {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Footer da tabela (Total) */
+.componentsTable tfoot {
+  background: linear-gradient(135deg, var(--accent), #0099cc);
+}
+
+.totalRow td {
+  border: none;
+  color: white;
+  padding: 1.2rem 1rem;
+  font-weight: 700;
+}
+
+.totalLabel {
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+.totalPrice {
+  font-size: 1.3rem;
+  text-align: right;
+  color: #fbbf24;
+}
+
+/* ========================================
+   SEÇÃO DE AÇÕES
+   ======================================== */
+.actionsSection {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.actionsSection h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Info do usuário logado */
+.userInfo {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--accent);
+  color: var(--text-secondary);
+}
+
+.userInfo strong {
+  color: var(--accent);
+}
+
+/* Prompt de login */
+.loginPrompt {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 0.75rem;
+  border-left: 4px solid #f59e0b;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.loginPrompt strong {
+  color: #f59e0b;
+}
+
+/* Grid de botões */
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* ========================================
+   BOTÕES
+   ======================================== */
+.saveButton,
+.exportButton,
+.loginButton,
+.registerButton,
+.secondaryButton {
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Botão Salvar */
+.saveButton {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+}
+
+.saveButton:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+}
+
+.saveButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Botão Exportar PDF */
+.exportButton {
+  background: linear-gradient(135deg, var(--accent), #0099cc);
+  color: white;
+  box-shadow: 0 4px 16px rgba(0, 212, 255, 0.3);
+}
+
+.exportButton:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.4);
+}
+
+.exportButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Botão Login */
+.loginButton {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+}
+
+.loginButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+/* Botão Registro */
+.registerButton {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+}
+
+.registerButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+}
+
+/* Botão Secundário */
+.secondaryButton {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+}
+
+.secondaryButton:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   ALERTA DE SUCESSO
+   ======================================== */
+.successAlert {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+  animation: slideInRight 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   RESPONSIVO
+   ======================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .buildCard,
+  .actionsSection {
+    padding: 1.5rem;
+  }
+
+  .buttonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .componentsTable {
+    font-size: 0.85rem;
+  }
+
+  .componentsTable th,
+  .componentsTable td {
+    padding: 0.75rem;
+  }
+
+  .successAlert {
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+}
+
+/* ========================================
+   MODO CLARO/ESCURO (CLASSES)
+   ======================================== */
+
+/* As variáveis CSS (--bg-primary, --text-primary, etc.) 
+   já mudam automaticamente com o ThemeContext,
+   então não precisa de classes .dark e .light aqui! */
